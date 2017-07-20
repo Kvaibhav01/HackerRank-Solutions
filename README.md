@@ -1,7 +1,6 @@
 # HackerRank-in-Java
 ## This repository consists of all the HackerRank projects or challenges only in Java language.
 
-Featured on [Awesome Android](https://android.libhunt.com/project/hackerrank-in-java).
 
 **About HackerRank**
 
