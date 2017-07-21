@@ -1,4 +1,4 @@
-public class Person {
+public class ClassVsInstance {
     private int age;	
   
 	public Person(int initialAge) {
