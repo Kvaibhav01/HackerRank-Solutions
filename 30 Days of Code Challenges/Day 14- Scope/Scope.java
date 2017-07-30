@@ -28,6 +28,7 @@ class Difference {
         maximumDifference = max;
     }
 } 
+//End of Difference class
 
 public class Solution {
     public static void main(String[] args) {
