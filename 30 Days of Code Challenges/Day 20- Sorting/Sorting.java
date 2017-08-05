@@ -24,17 +24,17 @@ public class Sorting
                     int tmp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = tmp;
-                    numSwaps++;
+                    numOfSwaps++;
                 }
             }
 
-            if (numSwaps == 0) 
+            if (numOfSwaps == 0) 
             {
                 break;
             }
         }
 
-        System.out.println("Array is sorted in " + numSwaps + " swaps.");
+        System.out.println("Array is sorted in " + numOfSwaps + " swaps.");
         System.out.println("First Element: " + arr[0]);
         System.out.println("Last Element: " + arr[arr.length - 1]);
     }
