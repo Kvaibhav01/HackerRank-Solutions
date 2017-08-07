@@ -10,7 +10,7 @@ class Node {
     }
 }
 
-class Solution 
+class BST 
 {
     public static int getHeight(Node root) 
     {
