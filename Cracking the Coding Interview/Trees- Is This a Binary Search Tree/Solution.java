@@ -1,4 +1,5 @@
-boolean checkBST(Node root) {
+boolean checkBST(Node root) 
+{
   return BST(root, -1, -1);
 }
 
