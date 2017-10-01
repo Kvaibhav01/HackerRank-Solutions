@@ -1,21 +1,26 @@
 import java.util.*;
 
-public class Solution {
+public class Solution
+{
   private static Map<Integer, Integer> fibonacciNumbers;
 
   public static int fibonacci(int n)
   {
-    if (n==0) {
+    if (n==0)
+    {
       return 0;
     }
-    else if (n==1) {
+    else if (n==1)
+    {
       return 1;
     }
-    else if (fibonacciNumbers.get(n)!=null) {
+    else if (fibonacciNumbers.get(n)!=null)
+    {
       return fibonacciNumbers.get(n);
 
     }
-    else {
+    else
+    {
       Integer thisNumber = fibonacci(n-1) + fibonacci(n-2);
       fibonacciNumbers.put(n,thisNumber);
       return thisNumber;
@@ -31,5 +36,4 @@ public class Solution {
     scanner.close();
     System.out.println(fibonacci(n));
   }
-
 }
