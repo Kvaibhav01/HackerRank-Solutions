@@ -30,19 +30,19 @@ public class Solution {
                 index++;
             }
         }
-        Arrays.sort(data); 
+        Arrays.sort(data); //Sort the given data
         
         
         double q1 = findMedian(data, 0, data.length / 2 - 1);
         double q3 = findMedian(data, (data.length + 1) / 2, data.length - 1);
-        System.out.println(q3 - q1); 
+        System.out.println(q3 - q1); //Calculating interquartile
     }
     
     
     private static double findMedian(int [] array, int start, int end) {
-        if ((end - start) % 2 == 0) { 
+        if ((end - start) % 2 == 0) { // odd number of elements
             return (array[(end + start) / 2]);
-        } else { 
+        } else { // even number of elements
             int value1 = array[(end + start) / 2];
             int value2 = array[(end + start) / 2 + 1];
             return (value1 + value2) / 2.0;
