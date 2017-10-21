@@ -1,0 +1,5 @@
+Answer: 5/6
+ 
+Explanation: We know that there are 6 possiblities on each die. Therefore, if we calculate for 2 dices we will have 6 x 6 = 36 possiblities.
+We have 4 different cases that match the desired criteria: (1,5) , (5,1) , (2,4) , (4,2)
+Therefore, this gives us a probability of 4/36 = 1/9.
