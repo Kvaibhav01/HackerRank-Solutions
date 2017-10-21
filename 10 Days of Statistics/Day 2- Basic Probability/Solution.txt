@@ -1,0 +1,5 @@
+Answer: 5/6
+
+Explanation: We know that there are 6 possiblities on each die. Therefore, if we calculate for 2 dices we will have 6 x 6 = 36 possiblities.
+The 6 cases where where sum > = 10 are:- (4,6), (5,5), (5,6), (6,4), (6,5), (6,6). Hence, it's probability becomes 6/36 = 1/6.
+Finally we get total probability where sum < = 9 as 1 - 1/6 = 5/6.
