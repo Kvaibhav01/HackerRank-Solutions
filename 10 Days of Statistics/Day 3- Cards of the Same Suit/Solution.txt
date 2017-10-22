@@ -1,0 +1,6 @@
+Answer: 12/5
+
+Explanation: 
+
+There are 13 of each suit in a deck. First we draw 1 card and see what suit it is.We know there will be 12 of the same matching suit 
+remaining in the 51-card deck. Therefore, when we draw the 2nd card, there is a 12/51 chance that it is the same suit.
