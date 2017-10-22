@@ -1,0 +1,9 @@
+Answer: 2/3
+
+Explanation:
+
+After drawing the first marble, we are left with 2 red marbles and 4 blue marbles. We calculate the probability of drawing a blue marble-
+
+P (blue) = (number of blue marbles) / (total marbles)
+= 4 / (2 + 4)
+= 2 / 3
