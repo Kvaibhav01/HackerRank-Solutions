@@ -1,6 +1,6 @@
 #BUBBLE SORT
 
-It is one of the most commonly asked question at every IT based company's technical interview. 
+##It is one of the most commonly asked question at every IT based company's technical interview. 
 
 To start with, following is the complexity of Bubble Sorting technique:
 
@@ -38,3 +38,4 @@ In addition to Bubble Sort, we have following Sorting Techniques too:
 7. Counting Sorting.
 8. Bucket Sorting.
 9. Shell Sorting.
+10. Bubble Sorting.
