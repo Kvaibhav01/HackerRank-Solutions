@@ -16,17 +16,17 @@ class Node {
 
 class Solution {
    
-  	public static void preOrder( Node root ) {
+    public static void preOrder( Node root ) {
       
-    	if( root == null)
-        	return;
+        if( root == null)
+            return;
       
         System.out.print(root.data + " ");
         preOrder(root.left);
         preOrder(root.right);
      
     }
-    /* Node is defined as :
+   /* Node is defined as :
  class Node 
     int data;
     Node left;
