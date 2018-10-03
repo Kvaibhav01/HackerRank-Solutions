@@ -1,0 +1,28 @@
+PROBLEM STATEMENT:
+3 types of bracket are there "()","[]","{}".
+A bracket is considered balanced if it has both closing and openeing bracket . Eg: {[]} is balanced.
+They are not balanced if the set of brackets it encloses doesn;t match. eg:{[}.
+
+INPUT FORMAT:
+A string of brackets is given as input.
+
+OUTPUT FORMAT:
+Print "YES" if it is a balanced bracket else print"NO".
+
+example:
+{[()]}
+{[(])}
+{{[[(())]]}}
+o/p:
+YES
+NO
+YES
+
+ALGORITHM :
+1) Declare a character stack openBrackets.
+2) Now traverse the expression string exp.
+    a) If the current character is a starting bracket (‘(‘ or ‘{‘ or ‘[‘) then push it to stack i.e if it sends true in isOpen(), push to stack.
+    b) If the current character is a closing bracket (‘)’ or ‘}’ or ‘]’) then pop from stack and if the popped character is the matching starting bracket then fine else parenthesis are not balanced.
+3) After complete traversal, if there is some starting bracket left in stack then "NO”
+
+Time Complexity: O(n)
