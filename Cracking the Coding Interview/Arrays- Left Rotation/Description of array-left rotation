@@ -1,0 +1,16 @@
+PROBLEM DESCRIPTION :
+A left rotation operation on an array of size 1 shifts each of the array's elements 1 unit to the left.
+For example, if 3 left rotations are performed on array [1,2,3,4,5] , then the array would become [4,5,1,2,3] .
+
+INPUT FORMAT:
+Given an array of size "n" and let "k" be the number of left rotations to be performed (BOTH SEPARATED BY A SPACE).
+Array is given in the second line.
+
+OUTPUT FORMAT:
+Print a single line of output of n sized array after performing rotation.
+
+EXAMPLE:
+5 3
+[1,2,3,4,5]
+o/p:
+[4,5,1,2,3]
