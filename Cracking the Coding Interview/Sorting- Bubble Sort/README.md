@@ -2,15 +2,15 @@
 
 ## It is one of the most commonly asked question at every IT based company's technical interview. 
 
-To start with, following is the complexity of Bubble Sorting technique:
+### To start with, following is the complexity of Bubble Sorting technique:
 
-*Worst-case Space Complexity: Auxiliary.
+- Worst-case Space Complexity: Auxiliary.
 
-*Best-case Performance: О(n) comparisons, О(1) swaps.
+- Best-case Performance: О(n) comparisons, О(1) swaps.
 
-*Worst-case Performance: О(n2) comparisons, О(n2) swaps.
+- Worst-case Performance: О(n2) comparisons, О(n2) swaps.
 
-*Average Performance: О(n2) comparisons, О(n2) swaps.
+- Average Performance: О(n2) comparisons, О(n2) swaps.
 
 ## SORTING PROCESS
 
