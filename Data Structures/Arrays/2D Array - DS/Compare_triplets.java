@@ -18,7 +18,6 @@ public class Solution {
         Iterator itr1 = a.iterator();
         Iterator itr2 = b.iterator();
 
-
         //For storing the points
         int suma=0;
         int sumb=0;
@@ -39,12 +38,9 @@ public class Solution {
         }
 
         List<Integer> result = new ArrayList<Integer>();
-
         result.add(suma);
         result.add(sumb);
-
         return result;
-        
     }
 
     public static void main(String[] args) throws IOException {
@@ -67,7 +63,6 @@ public class Solution {
                 .collect(joining(" "))
             + "\n"
         );
-
         bufferedReader.close();
         bufferedWriter.close();
     }
