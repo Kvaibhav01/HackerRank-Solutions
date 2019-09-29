@@ -14,7 +14,6 @@ process.stdin.on('end', _ => {
     inputString = inputString.replace(/\s*$/, '')
         .split('\n')
         .map(str => str.replace(/\s*$/, ''));
-
     main();
 });
 
@@ -40,16 +39,10 @@ function rotateAndPrint(arr, d) {
     process.stdout.write(rotatedArray.join(" "));
 }
 
-
-
 function main() {
     const nd = readLine().split(' ');
-
     const n = parseInt(nd[0], 10);
-
     const d = parseInt(nd[1], 10);
-
     const a = readLine().split(' ').map(aTemp => parseInt(aTemp, 10));
-
     rotateAndPrint(a, d);
 }

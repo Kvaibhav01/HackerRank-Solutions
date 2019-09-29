@@ -16,14 +16,12 @@ process.stdin.on('end', function() {
     inputString = inputString.replace(/\s*$/, '')
         .split('\n')
         .map(str => str.replace(/\s*$/, ''));
-
     main();
 });
 
 function readLine() {
     return inputString[currentLine++];
 }
-
 
 // Helper function: just swap two places in the array
 function swap(array, a, b) {
@@ -41,14 +39,9 @@ function reverseArray(a) {
 
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
-
     const arrCount = parseInt(readLine(), 10);
-
     const arr = readLine().split(' ').map(arrTemp => parseInt(arrTemp, 10));
-
     const res = reverseArray(arr);
-
     ws.write(res.join(' ') + '\n');
-
     ws.end();
 }
