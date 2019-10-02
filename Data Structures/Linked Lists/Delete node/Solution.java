@@ -40,7 +40,19 @@ public class Solution {
         }
     }
 
-    // Complete the printLinkedList function below.
+    public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter) throws IOException {
+        while (node != null) {
+            bufferedWriter.write(String.valueOf(node.data));
+
+            node = node.next;
+
+            if (node != null) {
+                bufferedWriter.write(sep);
+            }
+        }
+    }
+
+    // Complete the deleteNode function below.
 
     /*
      * For your reference:
@@ -51,18 +63,30 @@ public class Solution {
      * }
      *
      */
-    static void printLinkedList(SinglyLinkedListNode head) {
-        SinglyLinkedListNode aux = head;
-        while (aux.next != null) {
-            System.out.println(aux.data);
-            aux = aux.next;
+    static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
+        if (position != 0) {
+            SinglyLinkedListNode auxPrevious = head;
+            SinglyLinkedListNode auxNext = head.next.next;
+            int cont = 0;
+            while (cont != position - 1) {
+                auxPrevious = auxPrevious.next;
+                auxNext = auxPrevious.next.next;
+                cont += 1;
+            }
+            if (cont <= 1000) {
+            auxPrevious.next = auxNext;
+            }
+        } else {
+            head = head.next;
         }
-        System.out.println(aux.data);
+        return head;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
         SinglyLinkedList llist = new SinglyLinkedList();
 
         int llistCount = scanner.nextInt();
@@ -75,7 +99,15 @@ public class Solution {
             llist.insertNode(llistItem);
         }
 
-        printLinkedList(llist.head);
+        int position = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        SinglyLinkedListNode llist1 = deleteNode(llist.head, position);
+
+        printSinglyLinkedList(llist1, " ", bufferedWriter);
+        bufferedWriter.newLine();
+
+        bufferedWriter.close();
 
         scanner.close();
     }
