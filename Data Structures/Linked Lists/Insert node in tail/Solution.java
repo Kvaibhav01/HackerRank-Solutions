@@ -20,24 +20,12 @@ public class Solution {
 
     static class SinglyLinkedList {
         public SinglyLinkedListNode head;
-        public SinglyLinkedListNode tail;
 
         public SinglyLinkedList() {
             this.head = null;
-            this.tail = null;
         }
 
-        public void insertNode(int nodeData) {
-            SinglyLinkedListNode node = new SinglyLinkedListNode(nodeData);
-
-            if (this.head == null) {
-                this.head = node;
-            } else {
-                this.tail.next = node;
-            }
-
-            this.tail = node;
-        }
+      
     }
 
     public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter) throws IOException {
@@ -52,7 +40,7 @@ public class Solution {
         }
     }
 
-    // Complete the insertNodeAtPosition function below.
+    // Complete the insertNodeAtTail function below.
 
     /*
      * For your reference:
@@ -63,20 +51,22 @@ public class Solution {
      * }
      *
      */
-    static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
-        SinglyLinkedListNode auxPrevious = head;
-        SinglyLinkedListNode auxNext = head.next;
-        int cont = 0;
-        while (cont != position - 1) {
-            auxPrevious = auxPrevious.next;
-            auxNext = auxPrevious.next;
-            cont += 1;
-        }
-        if (cont <= 1000) {
-            SinglyLinkedListNode newNext = auxNext;
-            SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
-            auxPrevious.next = newNode;
-            newNode.next = newNext;
+    static SinglyLinkedListNode insertNodeAtTail(SinglyLinkedListNode head, int data) {
+        SinglyLinkedListNode aux = head;
+        int cont = 1;
+
+        if (head == null) {
+            SinglyLinkedListNode newHead = new SinglyLinkedListNode(data);
+            head = newHead;
+        } else {
+            while (aux.next != null) {
+                aux = aux.next;
+                cont += 1;
+            }
+            if (cont <= 1000) {
+                SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
+                aux.next = newNode;
+            }
         }
         return head;
     }
@@ -94,19 +84,15 @@ public class Solution {
         for (int i = 0; i < llistCount; i++) {
             int llistItem = scanner.nextInt();
             scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        	
+          SinglyLinkedListNode llist_head = insertNodeAtTail(llist.head, llistItem);
 
-            llist.insertNode(llistItem);
+          llist.head = llist_head;
         }
 
-        int data = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-        int position = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-        SinglyLinkedListNode llist_head = insertNodeAtPosition(llist.head, data, position);
-
-        printSinglyLinkedList(llist_head, " ", bufferedWriter);
+        printSinglyLinkedList(llist.head, "\n", bufferedWriter);
         bufferedWriter.newLine();
 
         bufferedWriter.close();
