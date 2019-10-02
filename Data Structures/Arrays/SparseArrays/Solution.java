@@ -14,24 +14,34 @@ public class Solution {
     // Complexity: O(N)
     static int[] matchingStrings(String[] strings, String[] queries) {
         Map<String, Integer> map = new HashMap();
-        for(String s: strings){
+        // NOTICE THIS LINE BREAK
+        for(String s: strings)
+        {
             map.put(s, map.getOrDefault(s, 0) + 1);
         }
+        // NOTICE THIS LINE BREAK
         int[] res = new int[queries.length];
-        for(int i = 0; i<queries.length; i++){
-            if(map.containsKey(queries[i])){
+        // NOTICE THIS LINE BREAK
+        for(int i = 0; i<queries.length; i++)
+        {
+            if(map.containsKey(queries[i]))
+            {
                 res[i] = map.get(queries[i]);
-            } else {
+            }
+            // NOTICE THIS LINE BREAK
+            else {
                 res[i] = 0;
             }
         }
         return res;
+        // NOTICE THIS LINE BREAK
 
     }
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException 
+    {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         int stringsCount = scanner.nextInt();
@@ -39,7 +49,8 @@ public class Solution {
 
         String[] strings = new String[stringsCount];
 
-        for (int i = 0; i < stringsCount; i++) {
+        for (int i = 0; i < stringsCount; i++) 
+        {
             String stringsItem = scanner.nextLine();
             strings[i] = stringsItem;
         }
@@ -49,14 +60,16 @@ public class Solution {
 
         String[] queries = new String[queriesCount];
 
-        for (int i = 0; i < queriesCount; i++) {
+        for (int i = 0; i < queriesCount; i++)
+        {
             String queriesItem = scanner.nextLine();
             queries[i] = queriesItem;
         }
 
         int[] res = matchingStrings(strings, queries);
 
-        for (int i = 0; i < res.length; i++) {
+        for (int i = 0; i < res.length; i++) 
+        {
             bufferedWriter.write(String.valueOf(res[i]));
 
             if (i != res.length - 1) {
