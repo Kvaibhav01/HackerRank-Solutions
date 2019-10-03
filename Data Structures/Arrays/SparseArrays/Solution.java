@@ -12,31 +12,32 @@ public class Solution {
     // Find the number of occurences of every string in the strings array, and then just retrieve 
     // this value for every string in queries, and 0 if there is no such string in the hashmap
     // Complexity: O(N)
-    static int[] matchingStrings(String[] strings, String[] queries) {
+    
+    static int[] matchingStrings(String[] strings, String[] queries) 
+    {
         Map<String, Integer> map = new HashMap();
-        // NOTICE THIS LINE BREAK
+        
         for(String s: strings)
         {
             map.put(s, map.getOrDefault(s, 0) + 1);
         }
-        // NOTICE THIS LINE BREAK
+        
         int[] res = new int[queries.length];
-        // NOTICE THIS LINE BREAK
-        for(int i = 0; i<queries.length; i++)
+       
+        for (int i = 0; i<queries.length; i++)
         {
-            if(map.containsKey(queries[i]))
+            if (map.containsKey(queries[i]))
             {
                 res[i] = map.get(queries[i]);
             }
-            // NOTICE THIS LINE BREAK
+            
             else {
                 res[i] = 0;
             }
         }
         return res;
-        // NOTICE THIS LINE BREAK
-
-    }
+        
+         }
 
     private static final Scanner scanner = new Scanner(System.in);
 
