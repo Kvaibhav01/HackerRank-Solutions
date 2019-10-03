@@ -63,22 +63,27 @@ public class Solution {
      * }
      *
      */
+
     static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
         if (position != 0) {
             SinglyLinkedListNode auxPrevious = head;
             SinglyLinkedListNode auxNext = head.next.next;
+
             int cont = 0;
+
             while (cont != position - 1) {
                 auxPrevious = auxPrevious.next;
                 auxNext = auxPrevious.next.next;
                 cont += 1;
             }
+
             if (cont <= 1000) {
             auxPrevious.next = auxNext;
             }
         } else {
             head = head.next;
         }
+
         return head;
     }
 
