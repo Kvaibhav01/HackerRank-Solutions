@@ -66,18 +66,22 @@ public class Solution {
     static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
         SinglyLinkedListNode auxPrevious = head;
         SinglyLinkedListNode auxNext = head.next;
+
         int cont = 0;
+
         while (cont != position - 1) {
             auxPrevious = auxPrevious.next;
             auxNext = auxPrevious.next;
             cont += 1;
         }
+
         if (cont <= 1000) {
             SinglyLinkedListNode newNext = auxNext;
             SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
             auxPrevious.next = newNode;
             newNode.next = newNext;
         }
+
         return head;
     }
 
