@@ -10,7 +10,7 @@
      *
      */
     static void reversePrint(SinglyLinkedListNode head) {
-        if(head==null)
+        if(head == null)
         return;
 
         reversePrint(head.next);
