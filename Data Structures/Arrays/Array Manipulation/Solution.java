@@ -10,7 +10,7 @@ public class Solution {
 
     // Complete the arrayManipulation function below.
     
-    static long arrayManipulation(int n, int[][] queries){
+    static long arrayManipulation(int n, int[][] queries) {
     long[] computation = new long[n];
 
     for (int i = 0; i < queries.length; i++) {
