@@ -27,14 +27,12 @@ class Node {
 */
 
 public static void postOrder(Node root) {
-
-        if (root != null) {
+	if (root != null) {
             postOrder(root.left);
             postOrder(root.right);
             System.out.print(root.data + " ");
         }
-
-    }
+}
 
 
 public static Node insert(Node root, int data) {
