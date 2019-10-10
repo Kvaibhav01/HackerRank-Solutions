@@ -1,8 +1,5 @@
 ﻿import java.io.*;
-import java.math.*;
-import java.text.*;
 import java.util.*;
-import java.util.regex.*;
 
 public class Solution {
 
@@ -18,11 +15,11 @@ public class Solution {
         for (int i = 0; i < arr.length; ++i) {
             int a = arr[i];
 
-            // 1) закрыть свои
+            // 1) close own strarted
             k+=h[a];
             ++h[a];
 
-            // 2) прибить меньших
+            // 2) kill smallers
             if(i>0 && arr[i-1] < a) {
                 for (int j = 0; j < a; ++j)
                     h[j] = 0;
