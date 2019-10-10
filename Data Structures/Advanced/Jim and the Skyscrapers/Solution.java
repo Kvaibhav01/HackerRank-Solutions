@@ -15,11 +15,11 @@ public class Solution {
         for (int i = 0; i < arr.length; ++i) {
             int a = arr[i];
 
-            // 1) close own strarted
+            // 1) close own started
             k+=h[a];
             ++h[a];
 
-            // 2) kill smallers
+            // 2) kill small ones
             if(i>0 && arr[i-1] < a) {
                 for (int j = 0; j < a; ++j)
                     h[j] = 0;
