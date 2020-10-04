@@ -11,20 +11,14 @@ class Solution{
         }
         sc.close();
 
-Comparator<String> customComparator = new Comparator<String>() {
-@Override
-public int compare(String s1, String s2) {
-BigDecimal a = new BigDecimal(s1);
-BigDecimal b = new BigDecimal(s2);
-return b.compareTo(a);
-  }
-};
-
-Arrays.sort(s, 0, n, customComparator);
-
-for(int i=0;i<n;i++)
-        {
-            System.out.println(s[i]);
-        }
-    }
-}
+ for(int i=0;i<n-1;i++){
+           for(int j=0;j<n-1-i;j++){
+               BigDecimal a=new BigDecimal(s[j]);
+               BigDecimal b=new BigDecimal(s[j+1]);
+               if(a.compareTo(b)<0){
+                   String temp=s[j];
+                   s[j]=s[j+1];
+                   s[j+1]=temp;
+               }
+           }
+       }
